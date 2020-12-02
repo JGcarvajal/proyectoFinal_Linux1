@@ -8,18 +8,41 @@
 <!--FORMULARIO-->
 <fieldset>
 <legend>FORMULARIO </legend>
-<form action="index2.php" method="post">
-<p>Nombre de Usuario:<input type="text" name="nombre_usu" size="50" placeholder="Escriba el nombre de usuario" /></p><p>
-<p>Numero de Habitacion:<input type="number" name="numero_hab" size="6"placeholder="Escriba el numero de Habitacion" /></p>
-<p>Numero de Celular:<input type="tel" name="numero_cel" size="10" placeholder="Escriba el numero de celular"/></p>
-<p>Numero de Telefono:<input type="tel" name="numero_tel" size="10" placeholder="Escriba el numero de telefono"/></p>
-<p>Otro numero:<input type="tel" name="otro" size="10" placeholder="Escriba otro numero de telefono"/></p>
-<p>Contraseña:<input type="password" name="contrasena" size="50" placeholder="Escriba su contraseña"/></p>
-<p>Confirmar Contraseña:<input type="password" name="con_contrasena" size="50" placeholder="confirmacion de contraseña"/></p>
+<form action="index2.php" method="POST">
+    <table>
+        <tr>
+        <td>Usuario:</td>
+    <td>
+        <input type="text" name="usuario" size="50" placeholder="Escriba el usuario" /></p>
+    </td>
+</tr>
+<tr>
+    <td>Nombre del Usuario:</td>
+<td>
+    <input type="text" name="nombre_usu" size="50" placeholder="Escriba el nombre de usuario" /></p>
+</td>
+</tr>
+<tr><td>Interprete</td>
+    <td>
+        <Select name = "interprete" >
+            <Option value = "bash"> bash </option>    
+            <Option value = "shell"> shell </option>    
+            </Select> 
+    </td>    
+</tr> 
+<tr><td>Grupo</td>
+<td><input type="text" name="grupo" size="50" placeholder="grupo"/></td></tr>
+
+<tr><td>Contraseña:</td>
+<td><input type="password" name="clave" size="50" placeholder="Contraseña"/></td></tr>
+
+</table>
 </fieldset>
-<a href='index2.php?function=listar'>Listar</a>
-<a href='index2.php?function=editar' class="button">editar</a>
-<p><input type="reset" value="borrar"/></p>
+<input id="crear" type="submit" name = "Crear" value="crear"/>
+<p><button type="reset" value="borrar"></p>
+</form>
+<form action="index2.php" method="GET">
+    <input id="listar" type="submit" name = "Listar" value="listar"/>
 </form>
 </body>
 </html>
