@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD']=="GET") {
    $grupo = $_POST['grupo'];
    $clave = $_POST['clave'];
    
-   crearUsuario($usuario,$nombre,$interprete,$grupo,$clave);
+   crearUsuario($usuario, $nombre, $interprete, $grupo, $clave);
    echo "Usuario Creado";
  }
 
@@ -65,8 +65,8 @@ function listar(){
  <?php
 
 }
-function crearUsuario($usuario,$nombre,$interprete,$grupo, $clave){
-   exec ("./crearUsuario.sh "+$usuario+" \"".$nombre."\" "+$interprete+" "+$grupo+" "+$clave , $salida);
+function crearUsuario($usuario, $nombre, $interprete, $grupo, $clave){
+   exec ("./crearUsuario.sh ".$usuario." \"".$nombre."\" ".$interprete." ".$grupo." ".$clave." " , $salida);
 echo "./crearUsuario.sh ".$usuario." \"".$nombre."\" ".$interprete." ".$grupo." ".$clave;
    echo "<pre>";
    foreach ( $salida as $linea ){echo $linea . "\n";}; 
